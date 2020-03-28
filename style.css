@@ -1,0 +1,527 @@
+*{
+    box-sizing: border-box;
+}
+
+html{
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+body{
+    margin: 0;
+    width: 100%;
+}
+
+main{
+    display: grid;
+    grid-gap: 20px;
+}
+
+nav{
+   width: 100vw;
+    background-color: #f9f9f9;
+    padding: 0.3rem 1rem;
+    border-bottom: 1px solid #f0f0f0;
+    color: #b0b0b0;
+    /* background-color: black; */
+}
+
+nav .brand, nav .brand i{
+    color: #3a92d6;
+}
+
+nav ul{
+    list-style: none;
+    padding: 0px;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+nav a{
+    font-size: 1.5rem;
+    padding: 0.5rem 1.2rem;
+    text-decoration: none;
+    display: block;
+    color: #a0a0a0;
+}
+
+nav a:hover{
+    color: #3a92d6;
+    font-weight: bold;
+}
+
+nav .brand{
+    margin-right: auto;
+  font-size: 2rem;
+  font-weight: 800;
+  position: relative;
+}
+
+nav .ham-burger{
+    display: none;
+}
+
+nav input{
+    display: none;
+}
+
+nav .burger{
+    display: inline-block;
+    transform: translateX(100%);
+}
+
+header{
+    width: 100vw;
+    height: 500px;
+    background: url(img-folder/bar-blur.jpg);
+    background-size: cover;
+    background-position: center;
+    text-align: center;
+    color: white;
+    display: grid;
+    align-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+header h1{
+    font-size: 4rem;
+    margin-bottom: 0;
+}
+
+header p{
+    margin-top: 0;
+    font-size: 1.5rem;
+}
+
+header .btn{
+    padding: 0.4rem 1rem;
+    font-size: 1.5rem;
+    border-radius: 0.5rem;
+    text-decoration: none;
+    background-color: white;
+    color: black;
+}
+
+header .btn:hover span::after{
+    content: " \00bb";
+}
+
+header .btn:hover{
+    /* border: 1px solid grey; */
+    /* background-color: #f5f5f5; */
+}
+
+.main-box-div h2{
+    margin: 0.5rem;
+    font-size: 3.5rem;
+    text-align: center;
+    /* color: #3a92d6; */
+    color: #808080;
+    /* color: #303030; */
+}
+
+.main-box-div .boxes{
+   width: 90vw;
+    margin-left: auto;
+    margin-right: auto;
+    /* width: 95%;;
+    margin-left: auto;
+    margin-right: auto; */
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    /* justify-items: center; */
+}
+
+.main-box-div .box{
+    padding: 2rem;
+    color: #303030;
+    background-color: #f9f9f9;
+    box-shadow: 0 2px 3px #808080;
+}
+
+.box i{
+    color: #808080;
+}
+
+.courses h2{
+    margin: 0.5rem;
+    font-size: 3.5rem;
+    text-align: center;
+    /* color: #3a92d6; */
+    color: #808080;
+    /* color: #303030; */
+}
+
+.courses{
+    /* background-color: red; */
+    /* height: 300px; */
+    width: 80%;
+    margin-top: 20px;
+    margin-left: auto;
+    margin-right: auto;
+    /*
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly; */
+}
+
+.courses .courses-brief{
+    text-align: center;
+    /* border-radius: 10px; */
+   
+    font-size: 2rem;
+   /* background-image: linear-gradient(to right, #3c1c71, #024898, #006db1, #0090bf, #18b1c6);; */
+   margin: 20px 0;
+   display: grid;
+   grid-template-columns: 1fr 1fr;
+   box-shadow: 2px 2px 5px #a0a0a0;
+   border-radius: 10px;
+  
+}
+
+.courses-brief .image{
+    background-color: #f9f9f9;
+    position: relative;
+    /* border-bottom-left-radius: 15px; */
+   border-top-left-radius: 10px;
+   border-bottom-left-radius: 10px;
+}
+
+.courses-brief h2{
+    margin: 0;
+    font-size: 3rem;
+    color: #faf1dc;
+    /* color: #e84c38;; */
+}
+
+.courses .content{
+    /* border-top-right-radius: 20px; */
+    padding: 40px 10px;
+    background-color: #e84c38;
+    /* background-color: #d9d9d9; */
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+
+}
+
+.courses-brief img{
+    width: 150px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.courses-brief .btn{
+    margin-top: 20px;
+    border-radius: 7px;
+    font-size: 1.5rem;
+    text-decoration: none;
+    color: white;
+    display: inline-block;
+    border: 2px solid white;
+    padding: 5px 10px;
+}
+
+.courses-brief .btn:hover{
+    background-color: white;
+    color: black;
+}
+
+footer{
+    width: 100vw;
+    padding: 5px;
+    display: grid;
+    grid-template-columns: 0.1fr 1.5fr 1fr 1fr 1fr 0.1fr;
+    grid-template-rows: repeat(1fr, 4);
+    grid-template-areas:
+        '. brand info helpful subscribe .'
+        '. about info helpful subscribe .'
+        '. contact info helpful subscribe .'
+        '. . social copy copy .';
+    background-color: #211f1f;
+    color: white;
+    font-size: 1.1rem;
+}
+
+footer h3{
+    font-size: 1.3rem;
+    color: #f2ab38;
+    margin: 0px;
+}
+
+footer > div{
+    padding: 20px;
+    padding-bottom: 0;
+}
+
+footer .brand{
+    grid-area: brand;
+    padding: 20px;
+    padding-bottom: 0px;
+    font-size: 2rem;
+    font-weight: 900;
+    color: #3a92d6;
+}
+
+footer .about{
+    grid-area: about;
+}
+
+footer .about p{
+    margin: 0;
+}
+
+footer .contact{
+    grid-area: contact;
+}
+
+/* footer .contact div{
+    padding: 10px;
+} */
+
+footer .contact i{
+    color: #f2ab38;
+}
+
+
+footer .info{
+    grid-area: info;
+}
+
+footer .info ul, footer .helpful ul{
+    list-style-type: none;
+    padding: 0.5rem 0;
+}
+
+footer .info a, footer .helpful a{
+    display: inline-block;
+    text-decoration: none;
+    padding: 0.3rem 0;
+    color: white;
+}
+
+footer .helpful{
+    grid-area: helpful;
+}
+
+footer .subscribe{
+    grid-area: subscribe;
+    position: relative;
+}
+
+footer .subscribe div{
+    display: block;
+    width: 100%;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    padding: 1rem;
+}
+
+footer .subscribe input{
+    background-image: url(img-folder/e-mail.svg);
+    background-size: 1rem 1rem;
+    background-repeat: no-repeat;
+    background-position: center left;
+    padding: 0.5rem;
+    padding-left: 1.5rem;
+    border-radius: 0.4rem;
+    margin-top: 1rem;
+    margin-bottom: 0.2rem;
+    width: 90%;
+}
+
+footer .subscribe button{
+    padding: 0.5rem 1rem;
+    border-radius: 0.4rem;
+    background-color: #f2ab38;
+    border: 2px solid #f2ab38;;
+    color: white;
+    font-weight: bold;
+}
+
+footer .subscribe button:hover{
+    background-color: white;
+    color: #f2ab38;
+    cursor: pointer;
+}
+
+
+footer .copy{
+    grid-area: copy;
+    text-align: right;
+}
+
+footer .social{
+    grid-area: social;
+}
+
+footer .social a{
+    font-size: 1.5rem;
+    padding: 0 0.5rem;
+    color: white;
+}
+
+
+
+
+@media screen and (max-width: 820px){
+    nav a{
+        font-size: 1.4rem;
+        padding: 0.5rem 0.7rem;
+    }
+    nav .brand{
+        font-size: 1.7rem;
+    }
+    .courses{
+        width: 60%;
+    }
+    .courses .courses-brief{
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 1fr;
+    }
+    footer{
+        grid-template-columns: 1fr 1fr 1fr 0.5fr;
+        grid-template-rows: 1fr 0.5fr 1fr 1fr 0.5fr 1fr 1fr;
+        grid-template-areas:
+            'brand      info        subscribe       subscribe'
+            'brand      info        subscribe       subscribe'
+            'about      info        subscribe       subscribe'
+            'about      helpful     subscribe       subscribe'
+            'contact    helpful     subscribe       subscribe'
+            'contact    helpful     subscribe       subscribe'
+            'social     copy          copy          copy';
+    }
+     footer{
+        position: relative;
+    }
+    footer .contact{
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+    }
+    footer .subscribe div{
+        width: 100%;
+    }
+    footer .info ul, footer .helpful ul{
+        margin-top: 0;
+    }
+
+}
+
+@media screen and (max-width: 650px){
+    nav ul{
+        flex-direction: column;
+    }
+    nav .brand{
+        margin-left: auto;
+    }
+    .main-box-div .boxes{
+        width: 80%;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr 1fr;
+    }
+    .main-box-div .box{
+        border-bottom: 1px solid #c0c0c0;
+    }
+    .courses{
+        width: 60%;
+    }
+    nav li:not(.brand){
+        display: none;
+    }
+    nav .ham-burger{
+        display: inline-block;
+    }
+    nav input:checked ~ li:not(.brand){
+        display: inline-block;
+    }
+    footer{
+        /* grid-template-rows: repeat(7, 1fr);
+        grid-template-columns: repeat(1, 1fr);
+        grid-template-areas:
+            'brand'
+            'about'
+            'information'
+            'helpful'
+            'subscribe'
+            'contact'
+            'social'; */
+       display: block;
+    }
+    footer div{
+        margin: 10px;
+    }
+    footer .contact{
+        position: static;
+    }
+    footer .subscribe{
+        position: static;
+    }
+    
+    footer .subscribe div{
+       position: static;
+       transform: translateY(0);
+    }
+    footer .contact{
+        position: static;
+        top: 0;
+        transform: translateY(0);
+    }
+}
+
+@media screen and (max-width: 480px){
+    header{
+        height: 400px;
+    }
+    header h1{
+        font-size: 2.5rem;
+    }
+    header p{
+        font-size: 1.25rem;
+    }
+    header .btn{
+        font-size: 1.25rem;
+        margin: 0.2rem 1rem;
+    }
+    .main-box-div h2{
+        margin: 0.25rem;
+        font-size: 2rem;
+    }
+    .main-box-div .boxes{
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(4, 1fr);
+        width: 70vw;
+    }
+    .main-box-div .box{
+        padding: 1rem;
+    }
+    .courses h2{
+       font-size: 2rem;
+    }
+    .courses-brief img{
+        width: 80px;
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+    }
+    
+    .courses-brief h2{
+        font-size: 1.5rem;
+        /* color: #e84c38;; */
+    }
+
+    .courses-brief .btn{
+        margin-top: 10x;
+        border-radius: 7px;
+        font-size: 1.1rem;
+        padding: 5px 10px;
+    }
+    .courses{
+        width: 60vw;
+    }
+}
